@@ -1,0 +1,5 @@
+FROM python:3.6.11-buster
+ADD score.py /
+ADD model_multi.h5 /
+RUN pip install requests datetime newsapi-python numpy pandas nltk tensorflow==2.0.0 requests
+CMD [ "python", "./score.py" ]
